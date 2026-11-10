@@ -1,0 +1,140 @@
+# Cindervale Instruments — marketing site configuration
+# Scaffolded from the "Cinder" theme. Values marked TODO are scaffold defaults
+# and must be reviewed before the next production build.
+
+title: "Cindervale Instruments"
+tagline: "Telemetry hardware and fleet intelligence for the industrial edge"
+description: >-
+  Cindervale Instruments designs rugged telemetry hardware and the software
+  that turns raw fleet signals into operational decisions.
+url: "https://www.cindervale.io"
+baseurl: ""
+locale: "en_US"
+timezone: "UTC"
+
+theme: "cinder-theme"
+theme_version: "2.8.4"
+remote_theme: "cindervale/cinder-theme@v2.8.4"
+
+paginate: 8
+paginate_path: "/notes/page:num/"
+permalink: "/notes/:year/:month/:title/"
+
+markdown: kramdown
+highlighter: rouge
+encoding: "utf-8"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: false
+      share: true
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author_profile: true
+      read_time: true
+  - scope:
+      path: ""
+      type: "release_notes"
+    values:
+      layout: "release"
+      sidebar: true
+
+collections:
+  release_notes:
+    output: true
+    permalink: "/releases/:name/"
+  hardware:
+    output: true
+    permalink: "/hardware/:name/"
+
+# ---------------------------------------------------------------------------
+# Author / contact block  (TODO: scaffold demo values, replace before publish)
+# ---------------------------------------------------------------------------
+author:
+  name: "Alex Demo"
+  email: "alex.demo@example.com"
+  github: "demouser"
+  github_username: "demouser"
+  orcid: "0000-0002-1825-0097"
+  pubmed: "demo_pubmed"
+  bluesky: "@demo.bsky.social"
+  mastodon: "@demo@mastodon.social"
+
+social:
+  links:
+    - "https://github.com/demouser"
+    - "https://bsky.app/profile/demo.bsky.social"
+    - "https://mastodon.social/@demo"
+
+seo:
+  type: "Organization"
+  og_image: "/assets/img/og-default.png"
+  twitter_card: "summary_large_image"
+  twitter:
+    username: "@demo_handle"
+    card: "summary_large_image"
+
+analytics:
+  enabled: false
+  provider: "plausible"
+  domain: "www.cindervale.io"
+
+build:
+  strict_front_matter: true
+  strict_upstream: false
+  incremental: false
+  show_drafts: false
+  future: false
+  limit_posts: 0
+
+assets:
+  sources:
+    - "_assets"
+    - "_images"
+  compress:
+    enabled: true
+    type: "gzip"
+
+footer:
+  copyright: "© 2026 Cindervale Instruments. All rights reserved."
+  links:
+    - label: "Privacy"
+      url: "/privacy/"
+    - label: "Terms"
+      url: "/terms/"
+    - label: "Support"
+      url: "https://support.cindervale.io"
+
+navigation:
+  - label: "Platform"
+    url: "/platform/"
+  - label: "Hardware"
+    url: "/hardware/"
+  - label: "Releases"
+    url: "/releases/"
+  - label: "Field Notes"
+    url: "/notes/"
+  - label: "Company"
+    url: "/company/"
+
+exclude:
+  - "scripts/"
+  - "vendor/"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules/"
+  - "*.log"
