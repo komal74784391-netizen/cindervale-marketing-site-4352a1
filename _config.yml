@@ -65,28 +65,23 @@ collections:
 # Author / contact block  (TODO: scaffold demo values, replace before publish)
 # ---------------------------------------------------------------------------
 author:
-  name: "Alex Demo"
-  email: "alex.demo@example.com"
-  github: "demouser"
-  github_username: "demouser"
-  orcid: "0000-0002-1825-0097"
-  pubmed: "demo_pubmed"
-  bluesky: "@demo.bsky.social"
-  mastodon: "@demo@mastodon.social"
+  name: "Tamsin Varela"
+  email: "tamsin.varela@cindervale.io"
+  github: "tvrela-dev"
+  github_username: "tvrela-dev"
+  bluesky: "@tamsinvarela.bsky.social"
+  mastodon: "@tamsin@techhub.social"
 
 social:
   links:
-    - "https://github.com/demouser"
-    - "https://bsky.app/profile/demo.bsky.social"
-    - "https://mastodon.social/@demo"
+    - "https://github.com/tvrela-dev"
+    - "https://bsky.app/profile/tamsinvarela.bsky.social"
+    - "https://techhub.social/@tamsin"
 
 seo:
   type: "Organization"
   og_image: "/assets/img/og-default.png"
   twitter_card: "summary_large_image"
-  twitter:
-    username: "@demo_handle"
-    card: "summary_large_image"
 
 analytics:
   enabled: false
